@@ -3,6 +3,7 @@ const model = require('./model.js')
 
 const bookArray = [];
 
+
 console.log('benvenuto in book manager!')
 
 startMenu();
@@ -39,8 +40,9 @@ function sortMenu() {
 function startMenu() {
   console.log('sono disponibili tre opzioni');
   console.log('1) aggiungi un libro');
-  console.log('2) lista libri');
-  console.log('3) esci')
+  console.log('2) aggiungi un magazzine');
+  console.log('3) lista libri');
+  console.log('4) esci')
 
   prompt.start();
 
@@ -89,9 +91,10 @@ function startMenuManager(err, result){
   if (result.selection === '1') {
     insertBook();   
   } else if (result.selection === '2'){
-    sortMenu()
-    // printBook() 
-  } else if (result.selection === '3') {
+    insertMagazine();   
+  } else if (result.selection === '3'){
+    sortMenu();
+  } else if (result.selection === '4') {
     console.log('Grazie e a Presto!')
     process.exit();
   } else {
@@ -102,28 +105,62 @@ function startMenuManager(err, result){
 
 function insertBook() {
 
-  // prompt.start();
-
-  const schema = {
-    properties: {
-      title: {
-        description: 'inserisci il titolo',
-      },
-        author: {
-        description: 'inserisci l\'autore',
-      },
-        publisher: {
-        description: 'inserisci la casa editrice',
-      },
-        yop: {
-        description: 'inserisci anno pubblicazione',
-      },
-    }
-  };
-
-  prompt.get(schema, insertBookManger);
+    // prompt.start();
   
-}
+    const schema = {
+      properties: {
+        title: {
+          description: 'inserisci il titolo',
+        },
+          author: {
+          description: 'inserisci l\'autore',
+        },
+          publisher: {
+          description: 'inserisci la casa editrice',
+        },
+          yop: {
+          description: 'inserisci anno pubblicazione',
+        },
+      }
+    };
+  
+    prompt.get(schema, insertBookManger);
+    
+  }
+
+  function insertMagazine() {
+
+    // prompt.start();
+  
+    const schema = {
+      properties: {
+        title: {
+          description: 'inserisci il titolo',
+        },
+        publisher: {
+          description: 'inserisci la casa editrice',
+        },
+        release: {
+          description: 'inserisci la pubblicazione ',
+        },
+        periodicy: {
+          description: 'inserisci la periodicità',
+        },
+        type:{
+          description: 'inserisci il tipo', 
+        },
+        price:{
+          description: 'inserisci il prezzo',
+        },
+        realeaseDate: {
+            description: 'inserisci la data nel formato YYYY-MM-DD',
+        },
+      }
+    };
+  
+    prompt.get(schema, insertMagazineManger);
+    
+  }
 
 function insertBookManger(err, result){
 
@@ -134,3 +171,13 @@ function insertBookManger(err, result){
   startMenu();
 
 }
+
+function insertMagazineManger(err, result){
+
+    const magazine = new model.Magazine(result.title, result.publisher, result.release, result.periodicy, result.type, result.price, result.copies, result.discount, new Date(result.realeaseDate));
+  
+    bookArray.push(magazine);
+  
+    startMenu();
+  
+  }

@@ -112,7 +112,7 @@ class Publication {
       const magazineString = super.toString() + '\n' +
         'Numero: ' + this.release + '\n' +
         'Periodicità: ' + this.periodicy + '\n' +
-        'Data di Pubblicazione: ' + this.releaseDate;
+        'Data di Pubblicazione: ' + this.releaseDate.toLocaleString();
   
       return magazineString;
   
