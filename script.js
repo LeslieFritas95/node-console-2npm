@@ -1,7 +1,7 @@
 const prompt = require('prompt');
 const model = require('./model.js')
 
-const bookArray = [];
+const publicationArray = [];
 
 
 console.log('benvenuto in book manager!')
@@ -42,7 +42,7 @@ function startMenu() {
   console.log('1) aggiungi un libro');
   console.log('2) aggiungi un magazzine');
   console.log('3) lista libri');
-  console.log('4) esci')
+  console.log('4) torna al menù principale')
 
   prompt.start();
 
@@ -63,13 +63,13 @@ function printBook(tipoSort){
 
     let sortedArray
     if(tipoSort == 1){
-        sortedArray = bookArray.sort(function(a, b){
+        sortedArray = publicationArray.sort(function(a, b){
             if(a.title < b.title) { return -1; }
             if(a.title > b.title) { return 1; }
             return 0;
         })
     } else {
-        sortedArray = bookArray.sort(function(a, b){
+        sortedArray = publicationArray.sort(function(a, b){
             if(a.yop < b.yop) { return -1; }
             if(a.yop > b.yop) { return 1; }
             return 0;
@@ -166,7 +166,7 @@ function insertBookManger(err, result){
 
   const book = new model.Book(result.title, result.author, result.publisher, result.type, result.price, result.copies, result.pages, result.yop );
 
-  bookArray.push(book);
+ publicationArray.push(book);
 
   startMenu();
 
@@ -176,7 +176,7 @@ function insertMagazineManger(err, result){
 
     const magazine = new model.Magazine(result.title, result.publisher, result.release, result.periodicy, result.type, result.price, result.copies, result.discount, new Date(result.realeaseDate));
   
-    bookArray.push(magazine);
+ publicationArray.push(magazine);
   
     startMenu();
   
