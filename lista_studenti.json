@@ -1,14 +1,5 @@
 [
   {
-    "nome": "William",
-    "cognome": "PEralta",
-    "genere": "M",
-    "eta": "31",
-    "sposato": "SI",
-    "corso": "backend",
-    "voti": "100+"
-  },
-  {
     "nome": "leslie",
     "cognome": "fritas",
     "genere": "F",
@@ -18,12 +9,12 @@
     "voti": "100+"
   },
   {
-    "nome": "Andrea",
-    "cognome": "Fritas",
-    "genere": "F",
-    "eta": "25",
-    "sposato": "NO",
-    "corso": "maketing",
-    "voti": "100++"
+    "nome": "William",
+    "cognome": "Peralta",
+    "genere": "eqwe",
+    "eta": "qweqw",
+    "sposato": "eqwe",
+    "corso": "qweqw",
+    "voti": "eqwe"
   }
 ]
