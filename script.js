@@ -1,10 +1,11 @@
+const { Console } = require('console');
 const prompt = require('prompt');
 const model = require('./model.js')
 
 const publicationArray = [];
 
 
-console.log('benvenuto in book manager!')
+console.log('Benvenuto in Book Manager!')
 
 startMenu();
 
@@ -24,6 +25,7 @@ function sortMenu() {
     console.log('Scegli l\'ordine');
     console.log('1) per titolo');
     console.log('2) per anno pubblicazione');
+    console.log('3) per prezzo');
   
     const schema = {
       properties: {
@@ -103,6 +105,8 @@ function startMenuManager(err, result){
   }
 }
 
+
+
 function insertBook() {
 
     // prompt.start();
@@ -117,6 +121,9 @@ function insertBook() {
         },
           publisher: {
           description: 'inserisci la casa editrice',
+        },
+          price: {
+           description: 'inserisci il prezzo',   
         },
           yop: {
           description: 'inserisci anno pubblicazione',
@@ -164,7 +171,7 @@ function insertBook() {
 
 function insertBookManger(err, result){
 
-  const book = new model.Book(result.title, result.author, result.publisher, result.type, result.price, result.copies, result.pages, result.yop );
+  const book = new model.Book(result.title, result.author, result.publisher, result.type, parseFloat(result.price), result.copies, result.pages, result.yop );
 
  publicationArray.push(book);
 
@@ -174,7 +181,7 @@ function insertBookManger(err, result){
 
 function insertMagazineManger(err, result){
 
-    const magazine = new model.Magazine(result.title, result.publisher, result.release, result.periodicy, result.type, result.price, result.copies, result.discount, new Date(result.realeaseDate));
+    const magazine = new model.Magazine(result.title, result.publisher, result.release, result.periodicy, result.type, parseFloat(result.price), result.copies, result.discount, new Date(result.realeaseDate));
   
  publicationArray.push(magazine);
   
