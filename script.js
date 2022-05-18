@@ -84,7 +84,7 @@ function printBook(tipoSort){
         const book = sortedArray[i];
         console.log(book.toString())        
     }
-    console.log("-----------------------")  
+    console.log("-------------------")  
    
     startMenu();
 }
