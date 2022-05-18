@@ -1,4 +1,24 @@
 {
+<<<<<<< HEAD
+=======
+  "name": "console-2npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "model.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeslieFritas95/node-console-2npm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeslieFritas95/node-console-2npm/issues"
+  },
+  "homepage": "https://github.com/LeslieFritas95/node-console-2npm#readme",
+>>>>>>> 4455411f65fa68d3505dc95147054724df361f7f
   "dependencies": {
     "prompt": "^1.3.0"
   }

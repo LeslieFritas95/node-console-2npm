@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "leslie",
+    "cognome": "fritas",
+    "genere": "F",
+    "eta": "27",
+    "sposato": "SI",
+    "corso": "frontend",
+    "voti": "100+"
+  },
+  {
+    "nome": "William",
+    "cognome": "Peralta",
+    "genere": "eqwe",
+    "eta": "qweqw",
+    "sposato": "eqwe",
+    "corso": "qweqw",
+    "voti": "eqwe"
+  }
+]

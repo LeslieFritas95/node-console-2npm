@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Anabel",
+    "publisher": "qwe",
+    "type": "Non classificato",
+    "price": -1,
+    "copies": 0,
+    "discount": 0,
+    "tax": 10,
+    "author": "qweqw",
+    "pages": -1,
+    "yop": "1920"
+  },
+  {
+    "title": "Zorro",
+    "publisher": "asdasd",
+    "type": "Non classificato",
+    "price": -1,
+    "copies": 0,
+    "discount": 0,
+    "tax": 10,
+    "author": "asas",
+    "pages": -1,
+    "yop": "2020"
+  },
+  {
+    "title": "iliada",
+    "publisher": "aa",
+    "type": "Non classificato",
+    "price": -1,
+    "copies": 0,
+    "discount": 0,
+    "tax": 10,
+    "author": "aa",
+    "pages": -1,
+    "yop": "1900"
+  }
+]
