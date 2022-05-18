@@ -90,11 +90,7 @@ class Publication {
   
   class Magazine extends Publication {
   
-<<<<<<< HEAD
-    constructor(title, publisher, release, periodicy, type, price, copies, discount, releaseDate) {
-=======
     constructor(title, publisher, release, periodicy, type, price, copies, discount, releaseDate= new Date()) {
->>>>>>> 4455411f65fa68d3505dc95147054724df361f7f
       super(title, publisher, type, price, copies, discount, 20);
       this.release = release;
       this.periodicy = periodicy;
@@ -115,12 +111,8 @@ class Publication {
   
       const magazineString = super.toString() + '\n' +
         'Numero: ' + this.release + '\n' +
-        'Periodicità: ' + this.periodicy + '\n' +
-<<<<<<< HEAD
-        'Data di Pubblicazione: ' + this.releaseDate;
-=======
+        'Periodicità: ' + this.periodicy + '\n' + 
         'Data di Pubblicazione: ' + this.releaseDate.toLocaleString();
->>>>>>> 4455411f65fa68d3505dc95147054724df361f7f
   
       return magazineString;
   
